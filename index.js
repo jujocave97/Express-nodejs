@@ -8,7 +8,18 @@ const app = express();
 const port = 3000;
 
 app.use(express.json());
-app.use(cors()); // habilitamos a cualquier dominio
+
+const whiteList = ['http://localhost:8080','https://myapp.com'];
+const options = {
+  origin: (origin, cb) => {
+    if(whiteList.includes(origin)){
+      cb(null, true);
+    }else{
+      cb(new Error('no permitido'));
+    }
+  }
+}
+app.use(cors(options));
 
 app.get('/', (req, res) => {
     res.send('Hola mi primer server en express');
