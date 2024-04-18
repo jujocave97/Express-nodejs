@@ -4,6 +4,7 @@ const validatorHandler = require('../middlewares/validatorHandler');
 const {createProductSchema, updateProductSchema, getProductSchema} = require('./../schemas/productSchemas');
 
 
+
 const router = express.Router();
 const service =new ProductsService();
 

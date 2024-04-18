@@ -1,20 +1,16 @@
+const UserService = require('./../services/userServices');
 const express = require ('express');
-const {faker} = require('@faker-js/faker');
 
 const router = express.Router();
+const service = new UserService();
 
-router.get('/', (req, res) => {
-  const usuarios = [];
-  const { size } = req.query;
-  const limit = size || 10;
-  for ( let i = 0 ; i <  limit; i++){
-    usuarios.push({
-      name: faker.person.fullName(),
-      city: faker.person.zodiacSign(),
-      age: parseInt(faker.person.age),
-    });
+router.get('/', async (req, res, next) => {
+  try {
+      const users = await service.find();
+      res.json(users);
+  }catch (error){
+      next(error);
   }
-  res.json(usuarios);
 });
 
 module.exports = router;
