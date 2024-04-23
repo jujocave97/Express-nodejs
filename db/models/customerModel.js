@@ -46,6 +46,10 @@ const CustomerSchema = {
 class Customer extends Model{
   static associate(models){ // la fk deberia de estar en esta tabla
     this.belongsTo(models.User,{ as: 'user'});
+    this.hasMany(model.Order, {
+      as: 'orders',
+      foreignKey: 'customerId'
+    });
   }
 
   static config(sequelize){
