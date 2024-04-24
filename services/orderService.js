@@ -1,6 +1,6 @@
 const boom = require('@hapi/boom');
 
-const { models } = require ('./../libs/sequelize');
+const { models } = require ('./../lib/sequelize');
 
 class OrderService{
   constructor() {
@@ -27,7 +27,7 @@ class OrderService{
         association: 'customer',
         include: ['user']
         },
-        items
+        'items'
       ]
     });
     return order;

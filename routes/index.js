@@ -3,7 +3,7 @@ const express = require('express');
 const productsRoute = require('./productsRoute');
 const usersRoute = require('./usersRoute');
 const customerRoute = require('./customerRoute');
-const categoriesRoute = require('./categorisRoute');
+const categoriesRoute = require('./categoriesRoute');
 const orderRoute = require('./ordersRoute');
 
 function routerApi(app) {
