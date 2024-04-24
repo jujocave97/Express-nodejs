@@ -25,5 +25,5 @@ Si el usuario necesita ayuda, la puede encontrar en la plataforma platzi
 El proyecto es mantenido y contribuido por la misma persona
 
 <picture>
-  <img alt="imagen node" srcset= "https://www.muylinux.com/wp-content/uploads/2022/04/nodejs.png">
+  <img alt="imagen node" srcset= "./node.png">
 </picture>
