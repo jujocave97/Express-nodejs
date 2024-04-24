@@ -25,5 +25,5 @@ Si el usuario necesita ayuda, la puede encontrar en la plataforma platzi
 El proyecto es mantenido y contribuido por la misma persona
 
 <picture>
-  <img alt="imagen node" srcset= "./img/node.png">
+  <img alt="imagen node" src= "./img/node.png">
 </picture>
